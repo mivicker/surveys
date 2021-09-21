@@ -13,11 +13,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import json
 
-with open('deployment_settings.json') as f:
-    secrets = json.load(f)
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+with open(Path(BASE_DIR, 'deployment_settings.json')) as f:
+    secrets = json.load(f)
 
 
 # Quick-start development settings - unsuitable for production
