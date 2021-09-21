@@ -1,0 +1,5 @@
+{
+	"SECRET_KEY": "pw^yhg$vkblv+b(lqnqfx3*5qq@&=#+a69k2-$j5yz8olzx)y6",
+	"DEBUG": true,
+	"ALLOWED_HOSTS": ["localhost"]
+}
