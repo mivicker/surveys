@@ -1,0 +1,17 @@
+{% extends 'facilitation/base.html' %}
+{% block content %}
+<div class="pa4 bg-white ma2 br3">
+<form enctype="multipart/form-data" action="{% url 'upload-csv' %}" method="POST">
+	{% csrf_token %}
+	<div class="file-selector">
+		<h1>Upload member csv</h1>
+	<div>{{ form }}</div>
+	</div>
+	<div>
+	<button class="button-primary" type="submit">
+		Upload member csv
+	</button>
+	</div>
+</form>
+</div>
+{% endblock %}

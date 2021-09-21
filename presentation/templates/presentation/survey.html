@@ -1,0 +1,106 @@
+{% extends 'presentation/base.html' %}
+{% block content %}
+<form action="{% url 'survey' uid %}" method="post">
+	{% csrf_token %}
+	<div class="bg-white-90	center w-60-l w-90-m w-100-ns h-auto pa4">
+		<h1 class="green">Henry's Groceries for Health Satisfaction Survey</h1>
+		<div class="pa4 bg-white ma2 br3 green">
+			<p>We want to know what you think about the Henry's Groceries for Health program so we can make sure we are meeting your needs. Your answers will help us improve the program as needed. Thank you for your time!</p>
+			</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_one.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_one }}
+			</div>
+		</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_two.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_two }}
+				<div class="pl3">
+				{{ form.answer_two_a.label}}
+				</div>
+				<div class="pt3 pl3">
+				{{ form.answer_two_a }}
+				</div>
+			</div>
+		</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_three.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_three }}
+			</div>
+		</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_four.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_four }}
+			</div>
+			<div class="pl3">
+				{{ form.answer_four_b.label }}
+			</div>
+			<div class="pt3 pl3">
+				{{ form.answer_four_b }}
+			</div>
+		</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_five.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_five }}
+			</div>
+		</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_six.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_six }}
+			</div>
+		</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_seven.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_seven }}
+			</div>
+			<div class="mt2">
+				{{ form.answer_seven_b.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_seven_b }}
+			</div>
+		</div>
+
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_eight.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_eight }}
+			</div>
+		</div>
+		<div class="pa4 bg-white ma2 br3">
+			<div class="mt2">
+			{{ form.answer_nine.label }}
+			</div>
+			<div class="pa2">
+				{{ form.answer_nine }}
+			</div>
+		</div>
+	<div class="pa4">
+		<input type="submit" value="Submit">
+	</div>
+</div>
+</form>
+{% endblock %}
