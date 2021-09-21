@@ -2,12 +2,12 @@
 {% block content %}
 <form action="{% url 'survey' uid %}" method="post">
 	{% csrf_token %}
-	<div class="bg-white-90	center w-60-l w-90-m w-100-ns h-auto pa4">
+	<div class="bg-white-90 center w-100 w-80-l h-auto pa2 pa4-l">
 		<h1 class="green">Henry's Groceries for Health Satisfaction Survey</h1>
-		<div class="pa4 bg-white ma2 br3 green">
+		<div class="pa2 pa4-l bg-white ma1 br3 green">
 			<p>We want to know what you think about the Henry's Groceries for Health program so we can make sure we are meeting your needs. Your answers will help us improve the program as needed. Thank you for your time!</p>
-			</div>
-		<div class="pa4 bg-white ma2 br3">
+		</div>
+		<div class="pa2 pa4-l bg-white ma2 br3">
 			<div class="mt2">
 			{{ form.answer_one.label }}
 			</div>
