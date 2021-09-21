@@ -3,7 +3,6 @@ from multiselectfield import MultiSelectField
 from django.utils.timezone import now
 
 
-
 class Survey(models.Model):
     submission_time = models.DateTimeField(default=now, editable=False)
     """
