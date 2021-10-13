@@ -6,6 +6,7 @@ questions = {
     'answer_two': 'What are some of the reasons you did not use of the food?',
     'answer_two_a': 'If other please specify',
     'answer_three': 'Were all the ingredients familiar to you?',
+    'answer_three_b': 'If no, what ingredients were unfamiliar?',
     'answer_four': 'The food you receive from this program is designed to supplement other foods that you might be getting from other sources/places. Is this program providing enough food to meet your needs?',
     'answer_four_b': 'If not, can you explain?',
     'answer_five': 'Overall, how satisfied are you with the quality of the food provided?',

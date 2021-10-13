@@ -28,6 +28,8 @@ class Survey(models.Model):
 
     # Question two:
     # What are some of the reasons you did not use of the food?
+
+    #Skip this if choices_one is set to 'most' !!!!!!!!
     choices_two = [('too-much','Too much food.'),
                    ('didnt-like', 'Did not like the food'),
 		   ('unknown-prep', 'Did not know how to prepare the food'),

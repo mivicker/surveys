@@ -4,7 +4,7 @@
 	{% csrf_token %}
 	<div class="bg-white-90 center w-100 w-80-l h-auto pa2 pa4-l">
 		<h1 class="green">Henry's Groceries for Health Satisfaction Survey</h1>
-		<div class="pa2 pa4-l bg-white ma1 br3">
+		<div class="pa2 pa4-l bg-white ma2 br3">
 			<p>We want to know what you think about the Henry's Groceries for Health program so we can make sure we are meeting your needs. Your answers will help us improve the program as needed. Thank you for your time!</p>
 		</div>
 		<div class="pa2 pa4-l bg-white ma2 br3">
@@ -14,21 +14,22 @@
 			<div class="pa2">
 				{{ form.answer_one }}
 			</div>
+            <div id="question_two" class="dn">
+                <div class="mt2">
+                    {{ form.answer_two.label }}
+                </div>
+                <div class="pa2">
+                    {{ form.answer_two }}
+                    <div class="pl3">
+                        {{ form.answer_two_a.label}}
+                    </div>
+                    <div class="pt3 pl3">
+                        {{ form.answer_two_a }}
+                    </div>
+                </div>
+            </div>
 		</div>
-		<div class="pa2 pa4-l bg-white ma2 br3">
-			<div class="mt2">
-			{{ form.answer_two.label }}
-			</div>
-			<div class="pa2">
-				{{ form.answer_two }}
-				<div class="pl3">
-				{{ form.answer_two_a.label}}
-				</div>
-				<div class="pt3 pl3">
-				{{ form.answer_two_a }}
-				</div>
-			</div>
-		</div>
+
 		<div class="pa2 pa4-l bg-white ma2 br3">
 			<div class="mt2">
 			{{ form.answer_three.label }}
@@ -36,6 +37,14 @@
 			<div class="pa2">
 				{{ form.answer_three }}
 			</div>
+            <div id="answer_three_b" class="dn">
+                <div class="mt2">
+                {{ form.answer_three_b.label }}
+                </div>
+			<div class="pa2">
+				{{ form.answer_three_b }}
+			</div>
+        </div>
 		</div>
 		<div class="pa2 pa4-l bg-white ma2 br3">
 			<div class="mt2">
@@ -44,12 +53,14 @@
 			<div class="pa2">
 				{{ form.answer_four }}
 			</div>
+            <div id="answer_four_b" class="dn">
 			<div class="pl3">
 				{{ form.answer_four_b.label }}
 			</div>
 			<div class="pt3 pl3">
 				{{ form.answer_four_b }}
 			</div>
+            </div>
 		</div>
 		<div class="pa2 pa4-l bg-white ma2 br3">
 			<div class="mt2">
@@ -74,12 +85,14 @@
 			<div class="pa2">
 				{{ form.answer_seven }}
 			</div>
-			<div class="mt2">
-				{{ form.answer_seven_b.label }}
-			</div>
-			<div class="pa2">
-				{{ form.answer_seven_b }}
-			</div>
+            <div id="answer_seven_b" class="dn">
+                <div class="mt2">
+                    {{ form.answer_seven_b.label }}
+                </div>
+                <div class="pa2">
+                    {{ form.answer_seven_b }}
+                </div>
+            </div>
 		</div>
 
 		<div class="pa2 pa4-l bg-white ma2 br3">
@@ -90,7 +103,7 @@
 				{{ form.answer_eight }}
 			</div>
 		</div>
-		<div class="pa2 pa4-lbg-white ma2 br3">
+		<div class="pa2 pa4-l bg-white ma2 br3">
 			<div class="mt2">
 			{{ form.answer_nine.label }}
 			</div>
@@ -99,8 +112,37 @@
 			</div>
 		</div>
 	<div class="pa4">
-		<input type="submit" value="Submit">
+		<input class="f4 link dim ba bw2 ph3 pv2 mb2 dib" type="submit" value="Submit">
 	</div>
 </div>
 </form>
+<script>
+        function hider(to_hide, check_value) {
+            function check_field_value() {
+                if($(this).val() == check_value) {
+                    $( to_hide ).show();
+                } else {
+                    $( to_hide ).hide();
+                }
+            }
+            return check_field_value
+        }
+
+        $( document ).ready(function() {
+            $( '#id_answer_one_0' ).change(hider('#question_two', 'little'))
+            $( '#id_answer_one_1' ).change(hider('#question_two', 'some'))
+            $( '#id_answer_one_2' ).change(hider('#question_two', ''))
+
+            $( '#id_answer_three_0').change(hider('#answer_three_b', ''))
+            $( '#id_answer_three_1').change(hider('#answer_three_b', 'N'))
+
+            $( '#id_answer_four_0').change(hider('#answer_four_b', ''))
+            $( '#id_answer_four_1').change(hider('#answer_four_b', 'N'))
+
+            $( '#id_answer_seven_0').change(hider('#answer_seven_b', ''))
+            $( '#id_answer_seven_1').change(hider('#answer_seven_b', 'N'))
+        });
+    
+    </script>
+    
 {% endblock %}
