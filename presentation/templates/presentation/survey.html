@@ -120,9 +120,9 @@
         function hider(to_hide, check_value) {
             function check_field_value() {
                 if($(this).val() == check_value) {
-                    $( to_hide ).show();
+                    $( to_hide ).show(200);
                 } else {
-                    $( to_hide ).hide();
+                    $( to_hide ).hide(200);
                 }
             }
             return check_field_value
